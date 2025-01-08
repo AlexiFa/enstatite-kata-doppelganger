@@ -11,3 +11,10 @@ class Http_client:
             return SendMailResponse(200, "OK")
         else:
             return SendMailResponse(503, "Service unavailable")
+
+    def __str__(self):
+        return f"Http_client(is_available={self.is_available}), requests_history={self.requests_history}"
+
+    def __repr__(self):
+        return f"Http_client(is_available={self.is_available}), requests_history={self.requests_history}"
+
